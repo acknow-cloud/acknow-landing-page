@@ -303,7 +303,7 @@ export default function AcknowLanding() {
   };
 
   return (
-      <div className="min-h-screen relative bg-[oklch(90%_0.01_250)] text-[oklch(14%_0.02_252)]">
+      <div className="min-h-screen flex flex-col bg-[oklch(90%_0.01_250)] text-[oklch(14%_0.02_252)]">
         {/* Starfield background (lightweight) */}
         <div className="pointer-events-none fixed inset-0 z-0">
           <StarfieldCanvas shootingStars={bgShootingStars} intensity={bgIntensity} />
@@ -314,38 +314,19 @@ export default function AcknowLanding() {
 
         {/* Header */}
         <header className="relative z-10 mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-[oklch(22%_0.04_256.848)] flex items-center justify-center shadow-sm">
-              <Bell className="h-5 w-5 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-semibold tracking-tight text-[oklch(22%_0.04_256.848)]">Acknow</span>
-                <Badge className="bg-[oklch(22%_0.04_256.848)] text-white">alpha</Badge>
-              </div>
-              <p className="text-xs text-[oklch(28%_0.02_252)]">Automated incident remediation. Peace of mind for prod.</p>
-            </div>
-          </div>
-          <div className="hidden md:flex items-center gap-4 text-sm">
-            <a className="hover:underline" href="#about">About</a>
-            <a className="hover:underline" href="#updates">Updates</a>
-          </div>
+
         </header>
 
         {/* Hero */}
-        <main className="relative z-10 mx-auto max-w-6xl px-6 pb-20 pt-6">
+        <main className="flex-1 z-10 mx-auto max-w-6xl px-6 pb-20 pt-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs bg-white/80">
-                <ShieldCheck className="h-3.5 w-3.5 text-[oklch(22%_0.04_256.848)]" />
-                <span className="text-[oklch(22%_0.04_256.848)]">Secure by default</span>
-              </div>
-              <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-[oklch(14%_0.02_252)]">
-                Stay tuned — Acknow is coming soon
+              <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-[oklch(46%_0.12_145)]">
+                Acknow
               </h1>
+              <h1 className="mt-1 text-xl md:text-4xl font-semibold leading-tight tracking-tight text-[oklch(14%_0.02_252)]">is coming soon — Stay tuned</h1>
               <p className="mt-4 text-base md:text-lg text-[oklch(28%_0.02_252)]">
-                We're building an automated remediation platform for alerts and incidents. Subscribe for launch updates and early access.
-              </p>
+                On-call, off stress. Sleep while Acknow works.          </p>
 
               {/* Subscribe card */}
               <Card id="updates" className="mt-6 border border-[oklch(75%_0.02_250)] shadow-sm bg-white/85">
@@ -395,12 +376,13 @@ export default function AcknowLanding() {
                     </li>
                 ))}
               </ul>
+
             </div>
 
             {/* Mock preview panel */}
             <div className="relative">
               <div className="rounded-2xl border bg-white shadow-xl overflow-hidden">
-                <div className="flex items-center gap-2 border-b px-4 py-2 bg-[oklch(90%_0.01_250)]">
+                <div className="flex items-center gap-2 border-b px-4 py-2 bg-[oklch(80%_0.01_250)]">
                   <div className="h-3 w-3 rounded-full bg-[oklch(50%_0.15_30)]" />
                   <div className="h-3 w-3 rounded-full bg-[oklch(60%_0.09_256)]" />
                   <div className="h-3 w-3 rounded-full bg-[oklch(60%_0.07_145)]" />
@@ -408,10 +390,11 @@ export default function AcknowLanding() {
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-[oklch(14%_0.02_252)]">How it will work</h3>
                   <p className="mt-2 text-sm text-[oklch(28%_0.02_252)]">
-                    Acknow ingests alerts, runs vetted runbooks, and fixes incidents before users notice.
+                    <span className="font-semibold text-[oklch(22%_0.04_256.848)]">Acknow </span>
+                    ingests alerts, runs vetted runbooks, and fixes incidents before users notice.
                   </p>
                   <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    {[{ title: "Ingest", desc: "Alertmanager, Slack, Email" }, { title: "Decide", desc: "OPA policies, SLOs" }, { title: "Remediate", desc: "SSM / Temporal steps" }].map((x, i) => (
+                    {[{ title: "Integrate", desc: "Teams, Slack, more..." }, { title: "Decide", desc: "OPA policies, SLOs" }, { title: "Remediate", desc: "SSM / Temporal steps" }].map((x, i) => (
                         <div
                             key={i}
                             className="rounded-xl border p-3 select-none transition hover:shadow-md hover:scale-[1.02] will-change-transform cursor-default"
@@ -421,10 +404,7 @@ export default function AcknowLanding() {
                         </div>
                     ))}
                   </div>
-                  <div className="mt-5 flex items-center gap-2 text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-[oklch(60%_0.07_145)]" />
-                    <span className="text-[oklch(28%_0.02_252)]">Secure by design, least privilege, full audit.</span>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -439,8 +419,6 @@ export default function AcknowLanding() {
               <span>© {new Date().getFullYear()}</span>
             </div>
             <div className="flex items-center gap-6">
-              <a className="hover:underline" href="#">Privacy</a>
-              <a className="hover:underline" href="#">Contact</a>
               <div className="flex items-center gap-4 ml-4">
                 {/* Social icons with brand hover colors */}
                 <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[oklch(32%_0.02_252)] hover:text-black transition-colors"><XIcon className="h-5 w-5" /></a>
