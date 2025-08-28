@@ -421,9 +421,9 @@ export default function AcknowLanding() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-4 ml-4">
                 {/* Social icons with brand hover colors */}
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[oklch(32%_0.02_252)] hover:text-black transition-colors"><XIcon className="h-5 w-5" /></a>
-                <a href="https://www.reddit.com" target="_blank" rel="noopener noreferrer" aria-label="Reddit" className="text-[oklch(32%_0.02_252)] hover:text-[#FF4500] transition-colors"><RedditIcon className="h-5 w-5" /></a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[oklch(32%_0.02_252)] hover:text-[#0A66C2] transition-colors"><LinkedInIcon className="h-5 w-5" /></a>
+                <a href="https://x.com/AcknowCloud" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[oklch(32%_0.02_252)] hover:text-black transition-colors"><XIcon className="h-5 w-5" /></a>
+                <a href="https://www.reddit.com/user/AcknowCloud/" target="_blank" rel="noopener noreferrer" aria-label="Reddit" className="text-[oklch(32%_0.02_252)] hover:text-[#FF4500] transition-colors"><RedditIcon className="h-5 w-5" /></a>
+                <a href="https://www.linkedin.com/company/acknow/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[oklch(32%_0.02_252)] hover:text-[#0A66C2] transition-colors"><LinkedInIcon className="h-5 w-5" /></a>
               </div>
             </div>
           </div>
