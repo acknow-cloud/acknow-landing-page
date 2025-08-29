@@ -5,13 +5,6 @@ import {
     Cloud, Zap, Lock, Database, TerminalSquare, KeyRound, Network, Inbox, Bot, Download
 } from "lucide-react";
 
-/**
- * RunSafe — Full UI mock (Web + Mobile preview)
- * - Tabs: Dashboard, Alerts, Runbooks, Routing Rules, Integrations, SLO/Cost, On‑call, Reports, Policies, Audit, AI Agent
- * - Safe strings; no raw JSX '>' pitfalls
- * - CSV export defines filename
- * - Pure front-end mock with local state (no backend required)
- */
 
 // --- Helpers & fake data
 const SEV = ["P1","P2","P3"] as const;
